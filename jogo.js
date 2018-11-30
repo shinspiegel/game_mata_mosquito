@@ -2,7 +2,7 @@
 var altura = window.innerHeight
 var largura = window.innerWidth
 var vidas = 1
-var tempo = 10
+var tempo = 50
 
 function ajudaTamanhoPalco() {
     altura = window.innerHeight
@@ -10,6 +10,19 @@ function ajudaTamanhoPalco() {
 }
 
 ajudaTamanhoPalco()
+
+//CRONOMETRO FUNCIONANDO
+var cronometro = setInterval (function() {
+	tempo -= 1
+	
+	if (tempo < 0) {
+		clearInterval(cronometro)
+		clearInterval(criaMosquito)
+		window.location.href = "vitoria.html"
+	} else {
+		document.getElementById('cronometro').innerHTML = tempo
+	}
+}, 1000)
 
 
 //CRIACAO DOS ELEMENTOS
