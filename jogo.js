@@ -6,7 +6,7 @@ var tempo = 20
 var criaMosquitoTempo = 1500
 
 //RECUPERANDO NIVEL DE DIFICULDADE
-var nivel = window.location.href.search
+var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
 if 	(nivel === 'normal') 	{ criaMosquitoTempo = 1500 } else 
