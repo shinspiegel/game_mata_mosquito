@@ -2,6 +2,7 @@
 var altura = window.innerHeight
 var largura = window.innerWidth
 var vidas = 1
+var tempo = 10
 
 function ajudaTamanhoPalco() {
     altura = window.innerHeight
@@ -19,10 +20,10 @@ function posicaoRandomica() {
 		document.getElementById('mosquito').remove()
 
 		if (vidas > 3) {
-			alert('interromper jogo')
+			window.location.href = "fim_de_jogo.html"
 		} else {
-		document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
-		vidas++
+			document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+			vidas++
 		}
 	}
 
