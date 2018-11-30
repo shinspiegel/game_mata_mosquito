@@ -1,6 +1,7 @@
 //TAMANHO DA TELA DO JOGO
 var altura = window.innerHeight
 var largura = window.innerWidth
+var vidas = 1
 
 function ajudaTamanhoPalco() {
     altura = window.innerHeight
@@ -16,6 +17,13 @@ function posicaoRandomica() {
 	//remover mosquito se ele existe
 	if ( document.getElementById('mosquito') ) {
 		document.getElementById('mosquito').remove()
+
+		if (vidas > 3) {
+			alert('interromper jogo')
+		} else {
+		document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+		vidas++
+		}
 	}
 
 	//criando posicao alteatoria
@@ -33,6 +41,9 @@ function posicaoRandomica() {
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
 	mosquito.id = 'mosquito'
+	mosquito.onclick = function() {
+		this.remove()
+	}
 	
 	//inserindo elemento
 	document.body.appendChild(mosquito)
