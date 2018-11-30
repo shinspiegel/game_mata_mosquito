@@ -2,7 +2,17 @@
 var altura = window.innerHeight
 var largura = window.innerWidth
 var vidas = 1
-var tempo = 50
+var tempo = 20
+var criaMosquitoTempo = 1500
+
+//RECUPERANDO NIVEL DE DIFICULDADE
+var nivel = window.location.href.search
+nivel = nivel.replace('?', '')
+
+if 	(nivel === 'normal') 	{ criaMosquitoTempo = 1500 } else 
+if 	(nivel === 'dificil') 	{ criaMosquitoTempo = 1000 } else 
+if (nivel === 'chuck') 		{ criaMosquitoTempo = 800 }
+
 
 function ajudaTamanhoPalco() {
     altura = window.innerHeight
