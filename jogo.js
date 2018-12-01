@@ -12,7 +12,7 @@ nivel = nivel.replace('?', '')
 if 	(nivel === 'normal') 	{ criaMosquitoTempo = 1500 } else 
 if 	(nivel === 'dificil') 	{ criaMosquitoTempo = 1000 } else 
 if (nivel === 'chuck') 		{ criaMosquitoTempo = 800 }
-
+//teste
 
 function ajudaTamanhoPalco() {
     altura = window.innerHeight
